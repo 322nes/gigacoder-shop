@@ -8,8 +8,102 @@
 </head>
 
 <body>
-  <div id="app"></div>
-  <script type="module" src="/src/js/main.js"></script>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__inner container">
+          <a href="/" class="header__logo">
+            <img class="logo" src="public/images/logo.svg" alt="logo">
+          </a>
+          <nav class="header__nav hidden-tablet">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#!">О нас</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#!">Направления</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#!">Отзывы</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#!">Новости</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#!">Этапы</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#!">Стоимость</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__button-wrapper">
+            <button class="header__button button button-gradient" type="button">Пройти конкурс</button>
+            <button class="header__burger-button visible-tablet" type="button" onclick="mobileOverlay.showModal()">
+              <p></p>
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <section class="section-header">
+        <div class="header__content">
+          <div class="header__content-wrapper">
+            <div class="header__content-title">
+              Преврати свою <span>страсть</span>
+              <p>в карьеру <span>мечты</span></p>
+            </div>
+            <div class="header__content-subtitle">
+              Обучение программированию и стажировка в крутейших проектах.
+            </div>
+            <div class="header__content-button">
+              <button class="button">Пройти конкурс</button>
+            </div>
+          </div>
+          <div class="header__content-image">
+            <img class="header__content-img" src="public/images/header.svg" alt="image">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </div>
+  <dialog class="mobile-overlay visible-tablet" id="mobileOverlay">
+    <form class="mobile-overlay__close-button-wrapper" method="dialog">
+      <button class="mobile-overlay__close-button close-button" type="submit">
+        <span class="visually-hidden">Закрыть меню</span>
+      </button>
+    </form>
+    <div class="mobile-overlay__body">
+      <h2>Меню</h2>
+      <ul class="mobile-overlay__list">
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="#!">О нас</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="#!">Направления</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="#!">Отзывы</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="#!">Новости</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="#!">Этапы</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="#!">Стоимость</a>
+        </li>
+      </ul>
+    </div>
+  </dialog>
 </body>
+<script type="module" src="/src/js/main.js"></script>
 
 </html>

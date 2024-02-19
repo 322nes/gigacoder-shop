@@ -1,0 +1,111 @@
+.header {
+
+  &__wrapper {
+    height: 91px;
+    width: 100%;
+    box-shadow: 0px 4px 40px 0px #0000001a;
+
+    @include desktop {
+      height: 79px;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    @include tablet {
+      width: 180px;
+      height: 34px;
+    }
+
+    @include mobile {
+      width: 169px;
+      height: 30px;
+    }
+  }
+
+  &__nav {
+
+    &-list {
+      display: flex;
+      text-decoration: none;
+      column-gap: 45px;
+      @include font-inter(400);
+      font-size: 16px;
+      color: #4A5568;
+      transition: all 0.3s;
+      will-change: transform;
+
+      @include desktop {
+        column-gap: 27px;
+        font-size: 15px;
+      }
+    }
+
+    &-link {
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+
+      @include hover {
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        translate: -50%;
+        width: 0;
+        height: 2px;
+        background-color: currentColor;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &__button-wrapper {
+    @include flex-center;
+    column-gap: 10px;
+
+    @include mobile {
+      column-gap: 0;
+    }
+  }
+}
+
+.button-gradient {
+  background: var(--color-gradient);
+  text-wrap: nowrap;
+
+  @include hover {
+    opacity: 0.9;
+  }
+
+  @include desktop {
+    height: 40px;
+    padding-inline: 23px;
+  }
+
+  @include tablet {
+    height: 36px;
+    padding-inline: 21px;
+    font-size: 12px;
+  }
+
+  @include mobile {
+    height: 26px;
+    padding-inline: 10px;
+    font-size: 9px;
+  }
+}

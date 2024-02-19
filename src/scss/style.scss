@@ -1,2 +1,14 @@
-@import 'normalize.css';
-@import 'variables.scss';
+@import 
+  // 'normalize.css',
+  'reset',
+  'fonts',
+  'mixins',
+  'media',
+  'variables',
+  'global';
+
+@import 
+  'blocks/burger',
+  'blocks/header',
+  'blocks/main',
+  'blocks/footer';

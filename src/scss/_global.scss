@@ -1,0 +1,84 @@
+body {
+  @include font-inter(200);
+  font-size: 16px;
+  line-height: 1.28;
+  color: #1A202C;
+  background-color: #ffffff;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+  
+  @media (max-width: 1200px) {
+    padding: 0 5px;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  @include tablet-above {
+    display: none !important;
+  }
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  @include mobile-above {
+    display: none !important;
+  }
+}
+
+.show {
+  display: flex;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.button {
+  height: 42px;
+  @include flex-center;
+  background-color: var(--color-blue);
+  color: #fafafa;
+  border-radius: 5px;
+  font-size: 14px;
+  padding-inline: 25px;
+  font-weight: 600;
+  transition: all 0.3s;
+  will-change: transform;
+  transform-style: preserve-3d;
+  @include hover {
+    transform: scale(1.04);
+  }
+}
