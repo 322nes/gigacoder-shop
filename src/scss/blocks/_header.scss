@@ -8,6 +8,14 @@
     @include desktop {
       height: 79px;
     }
+
+    @include ipad {
+      height: 74px;
+    }
+
+    @include ipad {
+      height: 67px;
+    }
   }
 
   &__inner {
@@ -21,12 +29,16 @@
   .logo {
     @include tablet {
       width: 180px;
-      height: 34px;
+      height: auto;
+    }
+
+    @include ipad {
+      width: 165px;
+      margin-right: 5px;
     }
 
     @include mobile {
-      width: 169px;
-      height: 30px;
+      width: 39vw;
     }
   }
 
@@ -68,7 +80,7 @@
         translate: -50%;
         width: 0;
         height: 2px;
-        background-color: currentColor;
+        background: var(--color-blue);
         transition: all 0.3s;
       }
     }
@@ -85,6 +97,7 @@
 }
 
 .button-gradient {
+  height: 42px;
   background: var(--color-gradient);
   text-wrap: nowrap;
 
@@ -102,10 +115,16 @@
     padding-inline: 21px;
     font-size: 12px;
   }
+  
+  @include ipad {
+    height: 30px;
+    padding-inline: 15px;
+    font-size: 12px;
+  }
 
   @include mobile {
-    height: 26px;
-    padding-inline: 10px;
+    height: 24px;
+    padding-inline: 13px;
     font-size: 9px;
   }
 }

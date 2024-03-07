@@ -1,0 +1,109 @@
+.partners {
+  margin-top: 150px;
+
+  &__title {
+    font-weight: 500;
+    @include text-size(18, 35);
+    position: relative;
+    @include lh-blue;
+
+    p {
+      font-weight: 700;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+    background-color: #F7F7FA;
+    margin-top: 50px;
+    @include flex-center;
+
+    @include tablet {
+      height: 168px;
+    }
+
+    @include ipad {
+      height: 130px;
+    }
+
+    @include mobile {
+      height: 106px;
+    }
+  }
+
+  &__wrapper {
+    white-space: nowrap;
+    display: flex;
+    column-gap: 50px;
+    animation: beginner 90s linear infinite;
+
+    @include hover {
+      animation-play-state: paused;
+    }
+
+    span {
+      width: 100%;
+      display: flex;
+      column-gap: 50px;
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    max-height: 80px;
+    transition: all 0.3s;
+
+    @include hover {
+      transform: scale(1.06);
+      filter: invert(1.2);
+      cursor: pointer;
+    }
+
+    @include tablet {
+      max-height: 65px;
+    }
+
+    @include ipad {
+      max-height: 54px;
+    }
+
+    @include mobile {
+      max-height: 42px;
+    }
+  }
+}
+
+.partners-decoration {
+
+  &__item {
+    position: absolute;
+    bottom: 165px;
+    left: 64%;
+    z-index: -1;
+
+    @include tablet {
+      bottom: 135px;
+    }
+
+    @include ipad {
+      bottom: 95px;
+      left: 75%;
+    }
+
+    @include mobile {
+      bottom: 70px;
+    }
+  }
+}
+
+@keyframes beginner {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
