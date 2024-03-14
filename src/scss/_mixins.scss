@@ -1,17 +1,6 @@
-@mixin text-size($min: 16, $max: 48) {
+@mixin text-size($max: 48, $min: 16) {
   font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
-  // font-size: clamp((#{$min}px), #{$max / 1920 * 100}vw, #{$max}px);
-  // font-size: clamp((#{$min}px), #{1440 / $max * 100}vw, #{$max}px);
-  // font-size: clamp(#{$min / 16}rem, #{$max / 1920 * 100}vw, #{$max / 16}rem);
-
-  // font-size: clamp(#{$min}px,
-  //   (#{$min}px + (#{$max}px - #{$min}px) * ((1440vw - 430px) / (1440px - 430px))),
-  //   #{$max}px);
 }
-
-//1440 / $max // 1440px / 14px
-// 1vw = 102.86px
-// 0.136
 
 @mixin flex-center {
   display: flex;
